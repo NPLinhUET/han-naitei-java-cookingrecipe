@@ -1,7 +1,6 @@
 package com.cookingrecipe.entity;
 
-import java.util.ArrayList;
-import java.util.HashSet;
+import java.io.Serializable;
 import java.util.List;
 import java.util.Set;
 
@@ -15,7 +14,6 @@ import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 import lombok.Getter;
@@ -25,7 +23,7 @@ import lombok.Setter;
 @Table(name = "Users")
 @Getter
 @Setter
-public class User {
+public class User implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

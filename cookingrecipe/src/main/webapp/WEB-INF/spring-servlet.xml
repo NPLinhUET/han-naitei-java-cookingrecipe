@@ -31,6 +31,8 @@
 	<context:component-scan base-package="com.cookingrecipe.service" />
 	<context:component-scan base-package="com.cookingrecipe.dao" />
 	<context:component-scan base-package="com.cookingrecipe.entity" />
+	<context:component-scan base-package="com.cookingrecipe.configuration" />
+	<context:component-scan base-package="com.cookingrecipe.handler"/>
  	<!-- resources -->
 	<mvc:resources mapping="/resources/**" location="/resources/" />
 	<mvc:resources mapping="/webjars/**" location="/webjars/" />
@@ -99,5 +101,9 @@
   		<property name="order" value="1" />
   		<property name="contentType" value="text/html; charset=UTF-8" />
 		<property name="characterEncoding" value="UTF-8"></property>
+	</bean>
+	
+	<bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
+		<qualifier value="passwordEncoder"/>
 	</bean>
 </beans>

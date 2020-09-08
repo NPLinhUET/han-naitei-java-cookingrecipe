@@ -35,7 +35,7 @@
 		<property name="hibernateProperties">
 			<props>
 				<!-- cfg as in hibernate.cfg.xml file -->
-				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL55Dialect</prop>
 				<prop key="hibernate.show_sql">true</prop>
 				<prop key="hibernate.cache.provider_class">org.hibernate.cache.NoCacheProvider</prop>
 				<prop key="hibernate.hbm2ddl.auto">update</prop>

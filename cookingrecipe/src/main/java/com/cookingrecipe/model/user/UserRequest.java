@@ -4,6 +4,7 @@ import com.cookingrecipe.entity.Role;
 import com.cookingrecipe.entity.User;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
@@ -14,7 +15,7 @@ public class UserRequest {
 	private String email;
 	private String password;
 	private String confirmPassword;
-	private Role role;
+	private String role;
 	
 	public UserRequest(String fullname, String email, String password, String confirmPassword) {
 		super();
@@ -22,11 +23,11 @@ public class UserRequest {
 		this.email = email;
 		this.password = password;
 		this.confirmPassword = confirmPassword;
-		this.role = Role.USER;
+		this.role = "ROLE_ADMIN";
 	}
 	
 	public UserRequest() {
-		this.role=Role.USER;
+		this.role="ROLE_ADMIN";
 	}
 	
 	public User convertUser() {
